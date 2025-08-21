@@ -1,0 +1,139 @@
+/* ===== Paleta ===== */
+$bg-cream:#FFF7EC; $paper:#FFFFFF; $ink:#2A1F1F; $muted:rgba(#2A1F1F,.70);
+$accent:#FDB813; $line:rgba(#2A1F1F,.12); $line-strong:rgba(#2A1F1F,.20);
+$radius:16px; $shadow:0 10px 30px rgba(0,0,0,.08); $easing:.25s ease;
+
+/* ===== Imágenes dentro de panes ===== */
+#features .tab-pane .text-center img{
+  width:100%; height:auto; border-radius:$radius; border:1px solid $line; box-shadow:$shadow;
+}
+
+/* ===== NAV TABS (desktop base) ===== */
+#features{
+  .section-title h2{ margin:0; text-align:center; color:$ink; font-weight:800; }
+  .section-title::after{ content:""; display:block; width:64px; height:3px; margin:10px auto 0; background:$accent; border-radius:2px; }
+
+  #featTabs.nav-tabs{
+    border:0 !important; background:transparent;
+    display:flex; justify-content:center; align-items:center;
+    gap:clamp(16px,2.5vw,40px);
+    padding:0 0 18px; position:relative;
+  }
+
+  #featTabs .nav-item{ flex:0 0 auto; position:relative; }
+
+  #featTabs .nav-link{
+    border:0 !important; background:transparent !important; border-radius:10px !important;
+    padding:10px 8px 22px; display:flex; align-items:center; justify-content:center;
+    color:rgba($ink,.72); font-weight:700; font-size:1rem; letter-spacing:.15px; line-height:1;
+    transition:color $easing, transform $easing;
+    h4{ margin:0; font:inherit; font-weight:inherit; }
+    &:hover{ color:$ink; transform:translateY(-1px); }
+  }
+
+  /* underline gris corta + dorada activa */
+  #featTabs .nav-link::before{
+    content:""; position:absolute; bottom:0; left:14%; right:14%; height:3px;
+    background:$line-strong; border-radius:2px;
+  }
+  #featTabs .nav-link::after{
+    content:""; position:absolute; bottom:0; left:14%; right:14%; height:3px;
+    background:$accent; border-radius:2px; transform:scaleX(0); transform-origin:left;
+    transition:transform .24s ease;
+  }
+  #featTabs .nav-link.active::after{ transform:scaleX(1); }
+
+  /* línea sutil bajo todo el grupo */
+  #featTabs::after{ content:""; position:absolute; left:0; right:0; bottom:-1px; height:1px; background:rgba($ink,.06); }
+
+  .tabs-viewport{ position:relative; } /* wrapper de tabs */
+}
+
+/* ===== Móvil: carrusel real ===== */
+@media (max-width:991.98px){
+  /* Viewport con fade que NO tapa clics (mask) */
+  #features .tabs-viewport{
+    padding-inline:28px;
+    -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0,
+      rgba(0,0,0,1) 28px, rgba(0,0,0,1) calc(100% - 28px), rgba(0,0,0,0) 100%);
+            mask-image: linear-gradient(to right, rgba(0,0,0,0) 0,
+      rgba(0,0,0,1) 28px, rgba(0,0,0,1) calc(100% - 28px), rgba(0,0,0,0) 100%);
+  }
+  #features .tabs-viewport::before, #features .tabs-viewport::after{ display:none !important; }
+
+  /* Track: fila, sin wrap, scroll-x */
+  #features #featTabs{
+    display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important;
+    gap:18px; overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; &::-webkit-scrollbar{ display:none; }
+    scroll-snap-type:x mandatory;
+  }
+
+  #features #featTabs .nav-item{ flex:0 0 auto !important; scroll-snap-align:center; }
+  #features #featTabs .nav-link{
+    width:auto !important; white-space:nowrap; display:inline-flex;
+    padding:10px 12px 20px; font-size:.98rem; border-radius:10px !important;
+  }
+  #features #featTabs .nav-link::before, #features #featTabs .nav-link::after{
+    left:12%; right:12%; height:3px;
+  }
+
+  /* Flechas */
+  #features .tabs-arrow{
+    position:absolute; top:6px; bottom:6px; width:28px; display:flex;
+    align-items:center; justify-content:center; font-size:20px; border:0; background:transparent;
+    color:rgba($ink,.55); z-index:3; cursor:pointer; user-select:none;
+  }
+  #features .tabs-arrow.prev{ left:0; }
+  #features .tabs-arrow.next{ right:0; }
+
+  /* ===== Márgenes grandes (lo que pediste mantener) ===== */
+  #features #featTabs > .nav-item:first-child{ margin-left:1160px !important; }
+  #features #featTabs > .nav-item:last-child{  margin-right:1160px !important; }
+}
+
+/* Desktop: oculta flechas */
+@media (min-width:992px){
+  #features .tabs-arrow{ display:none; }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  #features #featTabs .nav-link, #features #featTabs .nav-link::after{ transition:none; }
+}
+/* iPad Pro (desktop breakpoint) – fuerza visibilidad de Servicios */
+@media (min-width: 992px) {
+  /* 1) Asegura visibilidad aunque AOS no se inicialice */
+  #features, 
+  #features .tabs-viewport, 
+  #features [data-aos]{
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  /* 2) Evita que algo lo tape (sube stacking y aísla) */
+  #features{
+    position: relative;
+    z-index: 5;           /* súbelo si aún queda detrás */
+    isolation: isolate;   /* crea stacking context propio */
+  }
+
+  /* 3) Si alguna sección previa tiene overlay grande, bájalo */
+  .alt-services, .hero, .header, .sticky-overlay{
+    z-index: 1;           /* ajusta a tu estructura real */
+  }
+
+  /* 4) Por si un padre recorta (recuerda revertir si no es necesario) */
+  #features, #features .container{
+    overflow: visible !important;
+  }
+}
+
+/* iPad/iOS Safari: si hay bug con AOS/IntersectionObserver */
+@supports (-webkit-touch-callout: none) {
+  html:not(.aos-initialized) [data-aos]{
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

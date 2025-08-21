@@ -1,0 +1,61 @@
+
+:root {
+  --header-h: 72px;  /* ajusta al alto real en desktop */
+}
+
+@media (max-width: 991.98px) {
+  :root { --header-h: 64px; } /* alto en móvil si cambia */
+}
+
+:root {
+  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Roboto",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #feb900; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: rgba(219, 31, 31, 0.55);  /* The default color of the main navmenu links */
+  --nav-hover-color: #6f2323; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #feb900; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+:root {
+  --page-max: 1200px;       // ancho máximo sugerido
+}
+:root{
+  /* Paleta */
+  --background-color: #FFF7EC;     /* crema suave del fondo */
+  --paper: #FFFFFF;
+  --default-color: #2A1F1F;        /* texto principal (marrón oscuro) */
+  --heading-color: #2A1F1F;
+  --accent-color: #FDB813;         /* dorado (botón/underline) */
+  --accent-2: #F2A29B;             /* salmón suave (hover) */
+
+  /* Nav */
+  --nav-color: #4A3A3A;
+  --nav-hover-color: #2A1F1F;
+  --nav-dropdown-background-color: #FFFFFF;
+  --nav-dropdown-color: #433737;
+  --nav-dropdown-hover-color: #2A1F1F;
+
+  /* Tipografías */
+  --default-font: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --heading-font: Poppins, Manrope, sans-serif;
+  --nav-font: Manrope, sans-serif;
+
+  /* Dimensiones */
+  --header-h: 72px;
+}

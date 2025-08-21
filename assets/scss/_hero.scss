@@ -1,0 +1,476 @@
+hero {
+  padding-top: 80px;
+  background: linear-gradient(45deg, var(--background-color) 0%, color-mix(in srgb, var(--accent-color), transparent 95%) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80px;
+}
+
+.hero::before {
+  content: "" ;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, transparent 100%);
+  z-index: -1;
+}
+
+.hero .hero-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.hero .hero-content .content-header {
+  margin-bottom: 25px;
+}
+.hero .container {
+  max-width: 1600px;
+}
+.hero-wrapper .col-lg-5 {
+  padding-left: 24px; // o lo que quieras
+  padding-right: 24px;
+  margin-top: 39px;
+}
+
+
+.hero .hero-content .content-header h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: var(--heading-color);
+}
+
+@media (max-width: 768px) {
+  .hero .hero-content .content-header h1 {
+    font-size: 2.4rem;
+  }
+}
+
+.hero .hero-content .content-header p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  margin: 0;
+}
+
+.hero .hero-content .search-container {
+  background: var(--surface-color);
+  border-radius: 24px;
+  max-width: 760px;        /* ancho máximo */
+  padding: 24px 28px; 
+  box-shadow: 0 15px 50px color-mix(in srgb, var(--default-color), transparent 92%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
+  margin-bottom: 40px;
+}
+
+.hero .hero-content .search-container .search-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.hero .hero-content .search-container .search-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.hero .hero-content .search-container .search-header p {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  margin: 0;
+  font-size: 15px;
+}
+
+.hero .hero-content .search-container .property-search-form .search-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 13px;
+  
+  margin-bottom: 22px;
+}
+
+
+@media (max-width: 768px) {
+  .hero .hero-content .search-container .property-search-form .search-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.hero .hero-content .search-container .property-search-form .search-field {
+  position: relative;
+}
+
+.hero .hero-content .search-container .property-search-form .search-field .field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+/* INPUT + SELECT + TEXTAREA */
+.hero .hero-content .search-container .property-search-form .search-field input,
+.hero .hero-content .search-container .property-search-form .search-field select,
+.hero .hero-content .search-container .property-search-form .search-field textarea {
+  width: 100%;
+  padding: 14px 16px 14px 44px; /* deja espacio para el icono */
+  border: 2px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  border-radius: 12px;
+  font-size: 15px;
+  background: transparent;
+  color: var(--default-color);
+  transition: all 0.3s ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.hero .hero-content .search-container .property-search-form .search-field input:focus,
+.hero .hero-content .search-container .property-search-form .search-field select:focus,
+.hero .hero-content .search-container .property-search-form .search-field textarea:focus {
+  border-color: var(--accent-color);
+  outline: none;
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent-color), transparent 85%);
+}
+
+.hero .hero-content .search-container .property-search-form .search-field input::placeholder,
+.hero .hero-content .search-container .property-search-form .search-field select::placeholder,
+.hero .hero-content .search-container .property-search-form .search-field textarea::placeholder {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+/* SELECT: flecha */
+.hero .hero-content .search-container .property-search-form .search-field select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 16px center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  padding-right: 44px;
+}
+
+/* ICONO */
+.hero .hero-content .search-container .property-search-form .search-field .field-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: color-mix(in srgb, var(--accent-color), transparent 30%);
+  font-size: 16px;
+  margin-top: 12px;
+  pointer-events: none;
+}
+
+/* TEXTAREA: altura y ajuste de icono */
+.hero .hero-content .search-container .property-search-form .search-field textarea {
+  min-height: 120px;
+  line-height: 1.4;
+  resize: vertical; /* o 'none' si no quieres que se redimensione */
+}
+
+/* Si el icono queda muy arriba en el textarea, ajusta así: */
+.hero .hero-content .search-container .property-search-form .search-field textarea + .field-icon {
+  top: 22px;          /* ajusta según tu diseño */
+  transform: none;    /* quita el centrar vertical */
+  margin-top: 0;
+}
+
+
+.hero .hero-content .search-container .property-search-form .search-btn {
+  width: 100%;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  padding: 18px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.hero .hero-content .search-container .property-search-form .search-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent-color), transparent 65%);
+}
+
+.hero .hero-content .search-container .property-search-form .search-btn i {
+  font-size: 18px;
+}
+
+
+
+.hero .hero-visual .visual-container {
+  position: relative;
+  height: 650px;
+}
+
+.hero .hero-visual .visual-container .featured-property {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 480px;
+  box-shadow: 0 30px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.hero .hero-visual .visual-container .featured-property img {
+  width: 100%;
+  height: 100%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.hero .hero-visual .visual-container .featured-property .property-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+  padding: 40px 24px 24px;
+  color: white;
+}
+
+.hero .hero-visual .visual-container .featured-property .property-info .property-price {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.hero .hero-visual .visual-container .featured-property .property-info .property-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.hero .hero-visual .visual-container .featured-property .property-info .property-details span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.hero .hero-visual .visual-container .featured-property .property-info .property-details span i {
+  font-size: 13px;
+}
+
+.hero .hero-visual .visual-container .overlay-images .overlay-img {
+  position: absolute;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 4px solid var(--surface-color);
+}
+
+.hero .hero-visual .visual-container .overlay-images .overlay-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero .hero-visual .visual-container .overlay-images .overlay-1 {
+  top: 60px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+}
+
+.hero .hero-visual .visual-container .overlay-images .overlay-2 {
+  top: 240px;
+  right: -20px;
+  width: 120px;
+  height: 120px;
+}
+
+.hero .hero-visual .visual-container .agent-card {
+  margin-top: 20px;
+  background: var(--surface-color);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px color-mix(in srgb, var(--default-color), transparent 88%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--accent-color);
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-info h4 {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-info p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-info .agent-rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-info .agent-rating .stars {
+  display: flex;
+  gap: 2px;
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-info .agent-rating .stars i {
+  color: #ffc107;
+  font-size: 11px;
+}
+
+.hero .hero-visual .visual-container .agent-card .agent-profile .agent-info .agent-rating .rating-text {
+  font-size: 12px;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  font-weight: 600;
+}
+
+.hero .hero-visual .visual-container .agent-card .contact-agent-btn {
+  width: 44px;
+  height: 44px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hero .hero-visual .visual-container .agent-card .contact-agent-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  transform: scale(1.1);
+}
+
+.hero .hero-visual .visual-container .agent-card .contact-agent-btn i {
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .hero {
+    padding: 0px 0 60px;
+  }
+
+  .hero .hero-visual {
+    margin-top: 60px;
+  }
+
+  .hero .hero-visual .visual-container {
+    height: 500px;
+  }
+
+  .hero .hero-visual .visual-container .featured-property {
+    height: 380px;
+  }
+
+  .hero .hero-visual .visual-container .overlay-images .overlay-1 {
+    top: 40px;
+    right: -20px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .hero .hero-visual .visual-container .overlay-images .overlay-2 {
+    top: 180px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero .hero-visual .visual-container .agent-card {
+    bottom: -10px;
+    left: -20px;
+    width: 280px;
+    padding: 16px;
+  }
+
+  .hero .hero-visual .visual-container .agent-card .agent-profile .agent-photo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .hero .search-container {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 0px 0 40px;
+  }
+
+
+  .hero .search-container {
+    padding: 20px;
+  }
+
+  .hero .search-container .search-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .hero .hero-visual .visual-container .featured-property {
+    height: 300px;
+  }
+
+  .hero .hero-visual .visual-container .featured-property .property-info {
+    padding: 30px 20px 20px;
+  }
+
+  .hero .hero-visual .visual-container .featured-property .property-info .property-price {
+    font-size: 1.5rem;
+  }
+
+  .hero .hero-visual .visual-container .overlay-images .overlay-1 {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero .hero-visual .visual-container .overlay-images .overlay-2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero .hero-visual .visual-container .agent-card {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .hero .hero-visual .visual-container .agent-card .agent-profile {
+    gap: 12px;
+  }
+
+  .hero .hero-visual .visual-container .agent-card .agent-profile .agent-info h4 {
+    font-size: 15px;
+  }
+}

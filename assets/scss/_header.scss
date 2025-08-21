@@ -1,0 +1,41 @@
+
+.header{
+  --background-color: rgba(255,255,255,.55); /* header translúcido */
+  --default-color: #170d0d;
+  --heading-color: #2a1f1f;
+
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: var(--header-h);
+  display: flex; align-items: center;
+  background-color: var(--background-color);
+  color: var(--default-color);
+  padding: 0;
+  transition: background-color .3s ease, box-shadow .3s ease;
+  z-index: 1100;
+  border-bottom: 1px solid rgba(42,31,31,.08);
+  /* Si el blur te causaba problemas, lo dejamos off */
+  /* backdrop-filter: saturate(1.05) blur(6px); */
+}
+.header.sticky-top{ z-index: 1100; }
+
+.header .logo img{ max-height: 36px; margin-right: 10px; }
+.header .logo .sitename{
+  font-size: 22px; margin:0; line-height:1;
+  font-weight: 700; letter-spacing:.2px;
+  color: #E39E00; /* dorado más profundo para contraste */
+  font-family: var(--heading-font);
+}
+
+/* Empuja el contenido por el header fijo */
+main, .page, .site-wrapper{ margin-top: var(--header-h); }
+
+/* IMPORTANTE: igualar ancho del header al del hero */
+@media (min-width: 1400px){
+  .header .container-xl,
+  .header .container-xxl { max-width: 1600px; } /* usa el MISMO valor que en tu hero */
+}
+
+/* Quita el “agarre” para agrandar el textarea */
+.mi-textarea { resize: none; }
+

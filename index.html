@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <!-- Tu CSS compilado desde SCSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <title>Express Glass</title>
+</head>
+    <body>
+        <header id="header" class="header d-flex align-items-center sticky-top">
+          <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+              <img src="assets/img/logo.png" alt="">
+              <h1 class="sitename">Expess Glass Termo Acústico Chile</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Proyectos</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+
+          </div>
+        </header>
+              <main class="main">
+                <section id="hero" class="hero section">
+                  <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hero-wrapper">
+                      <div class="row g-4">
+                        <!-- Columna izquierda -->
+                        <div class="col-lg-7">
+                          <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="content-header">
+                              <h1>Express Glass – Calidad y Confianza en Cada Proyecto</h1>
+                              <p>
+                                En Express Glass brindamos soluciones en instalación y reparación de ventanas, puertas y termopaneles
+                                que ofrecen diseño moderno, gran durabilidad y un aislamiento superior. Brindamos atención personalizada.
+                              </p>
+                            </div>
+                            <!-- Formulario de contacto -->
+                            <div class="search-container" data-aos="fade-up" data-aos-delay="300">
+                              <div class="search-header">
+                                <h3>Contáctanos</h3>
+                                <p>Ingresa tus datos y los detalles del servicio que necesitas</p>
+                              </div>
+                              <form name="contacto"
+                                    method="POST"
+                                    action="/gracias"
+                                    data-netlify="true"
+                                    netlify-honeypot="bot-field"
+                                    class="property-search-form">
+                                <!-- Requerido por Netlify -->
+                                <input type="hidden" name="form-name" value="contacto">
+                                <!-- Honeypot anti-spam -->
+                                <p style="display:none">
+                                  <label>No completar: <input name="bot-field"></label>
+                                </p>
+                                <div class="search-grid">
+                                  <!-- Nombre -->
+                                  <div class="search-field">
+                                    <label for="search-location" class="field-label">Nombre</label>
+                                    <input type="text" id="search-location" name="name" placeholder="Tu nombre" required>
+                                    <i class="bi bi-person field-icon"></i>
+                                  </div>
+                                  <!-- Correo -->
+                                  <div class="search-field">
+                                    <label for="search-type" class="field-label">Correo</label>
+                                    <input type="email" id="search-type" name="email" placeholder="tucorreo@ejemplo.com" required>
+                                    <i class="bi bi-envelope-at field-icon"></i>
+                                  </div>
+                                  <!-- Asunto -->
+                                  <div class="search-field">
+                                    <label for="search-budget" class="field-label">Asunto</label>
+                                    <input type="text" id="search-budget" name="subject" placeholder="¿Sobre qué te ayudamos?" required>
+                                    <i class="bi bi-briefcase field-icon"></i>
+                                  </div>
+                                  <!-- Teléfono -->
+                                  <div class="search-field">
+                                    <label for="search-rooms" class="field-label">Teléfono</label>
+                                    <input type="tel" id="search-rooms" name="phone" placeholder="+56 9 1234 5678" required>
+                                    <i class="bi bi-phone field-icon"></i>
+                                  </div>
+                                  <!-- Mensaje -->
+                                  <div class="search-field" style="grid-column: 1 / -1;">
+                                    <label class="field-label">Mensaje</label>
+                                    <textarea name="message" rows="5" placeholder="Cuéntanos los detalles" required style="resize:none; overflow:auto;"></textarea>
+                                  </div>
+                                  <!-- reCAPTCHA opcional -->
+                                  <!--
+                                  <div class="search-field" style="grid-column: span 2;">
+                                    <div data-netlify-recaptcha="true"></div>
+                                  </div>
+                                  -->
+                                </div>
+                                <button type="submit" class="search-btn">
+                                  <i class="bi bi-telegram"></i>
+                                  <span>Enviar</span>
+                                </button>
+                              </form>
+                            </div><!-- Fin search-container -->
+                          </div>
+                        </div><!-- Fin columna izquierda -->
+                        <!-- Columna derecha -->
+                        <div class="col-lg-5">
+                          <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                            <div class="visual-container">
+                              <!-- Imagen principal -->
+                              <div class="featured-property">
+                                <img src="assets/img/image.png" alt="Featured Property" class="img-fluid">
+                                <div class="property-info">
+                                  <div class="property-price">Consulta Gratis!</div>
+                                  <div class="property-details">
+                                    <span><i class="bi bi-geo-alt"></i> Santiago, Chile</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- Imágenes overlay -->
+                              <div class="overlay-images">
+                                <div class="overlay-img overlay-1">
+                                  <img src="assets/img/image.png" alt="Interior View" class="img-fluid">
+                                </div>
+                                <div class="overlay-img overlay-2">
+                                  <img src="assets/img/image.png" alt="Exterior View" class="img-fluid">
+                                </div>
+                              </div>
+                              <!-- Tarjeta de agente -->
+                              <div class="agent-card">
+                                <div class="agent-profile">
+                                  <img src="assets/img/image.png" alt="Agent Profile" class="agent-photo">
+                                  <div class="agent-info">
+                                    <h4>Hugo estrada</h4>
+                                    <p>Profesional en ventanas y puertas de vidrio termoacústico</p>
+                                    <div class="agent-rating">
+                                      <div class="stars">
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                        <i class="bi bi-star-fill"></i>
+                                      </div>
+                                      <span class="rating-text">5.0 (451 reviews)</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <button class="contact-agent-btn">
+                                  <i class="bi bi-chat-dots"></i>
+                                </button>
+                              </div>
+                            </div><!-- Fin visual-container -->
+                          </div>
+                        </div><!-- Fin columna derecha -->
+                      </div><!-- Fin row -->
+                    </div><!-- Fin hero-wrapper -->
+                  </div><!-- Fin container -->
+                </section>
+                  <section id="alt-services" class="alt-services section">
+                    <div class="container">
+
+                      <div class="row justify-content-around gy-4">
+                        <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                          <img src="assets/img/ChatGPT Image Aug 17, 2025, 03_07_50 AM.png" alt="">
+                        </div>
+
+                        <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+                          <h3>Transformamos espacios con vidrio y aluminio de calidad en Santiago de Chile</h3>
+                          <p>En Express Glass ofrecemos soluciones modernas en instalación y reparación de ventanas, puertas, termopaneles y estructuras en vidrio y aluminio. Nuestro compromiso es brindar diseño, seguridad y durabilidad en cada proyecto, entregando un servicio personalizado para hogares, oficinas y comercios.</p>
+
+                          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+                            <i class="bi bi-easel flex-shrink-0"></i>
+                            <div>
+                              <h4><a href="" class="stretched-link">Calidad Garantizada</a></h4>
+                              <p>Trabajamos con materiales certificados y mano de obra especializada para asegurar resultados duraderos en cada proyecto.</p>
+                            </div>
+                          </div><!-- End Icon Box -->
+
+                          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+                            <i class="bi bi-patch-check flex-shrink-0"></i>
+                            <div>
+                              <h4><a href="" class="stretched-link">Experiencia y Confianza</a></h4>
+                              <p>Más de 30 años brindando soluciones en vidrio y aluminio en Santiago nos respaldan.</p>
+                            </div>
+                          </div><!-- End Icon Box -->
+
+                          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+                            <i class="bi bi-brightness-high flex-shrink-0"></i>
+                            <div>
+                              <h4><a href="" class="stretched-link">Instalación Profesional</a></h4>
+                              <p>Nuestro equipo técnico garantiza precisión, seguridad y cumplimiento de plazos en cada instalación.</p>
+                            </div>
+                          </div><!-- End Icon Box -->
+
+                          <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+                            <i class="bi bi-brightness-high flex-shrink-0"></i>
+                            <div>
+                              <h4><a href="" class="stretched-link">Soporte Cercano</a></h4>
+                              <p>Acompañamos a nuestros clientes en todo el proceso, ofreciendo atención personalizada y postventa confiable.</p>
+                            </div>
+                          </div><!-- End Icon Box -->
+
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </section>
+                  <section id="features" class="features section">
+  <div class="container">
+
+    <!-- Título -->
+    <div class="section-title text-center mb-4">
+      <h2>Servicios</h2>
+    </div>
+
+    <!-- Viewport + flechas -->
+    <div class="tabs-viewport" data-aos="fade-up" data-aos-delay="100">
+      <button class="tabs-arrow prev" type="button" aria-label="Anterior">‹</button>
+
+      <ul class="nav nav-tabs" id="featTabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="tab-ventanas" data-bs-toggle="tab"
+            data-bs-target="#pane-ventanas" type="button" role="tab"
+            aria-controls="pane-ventanas" aria-selected="true">
+      <h4>Ventanas Termopanel</h4>
+    </button>
+  </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-terrazas" data-bs-toggle="tab" data-bs-target="#pane-terrazas" type="button" role="tab" aria-controls="pane-terrazas" aria-selected="false">
+            <h4>Cierres de Terrazas</h4>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-puertas" data-bs-toggle="tab" data-bs-target="#pane-puertas" type="button" role="tab" aria-controls="pane-puertas" aria-selected="false">
+            <h4>Puertas Vidrio/Aluminio</h4>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-mamparas" data-bs-toggle="tab" data-bs-target="#pane-mamparas" type="button" role="tab" aria-controls="pane-mamparas" aria-selected="false">
+            <h4>Shower & Mamparas</h4>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-especiales" data-bs-toggle="tab" data-bs-target="#pane-especiales" type="button" role="tab" aria-controls="pane-especiales" aria-selected="false">
+            <h4>Ventanales & Especiales</h4>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-mantencion" data-bs-toggle="tab" data-bs-target="#pane-mantencion" type="button" role="tab" aria-controls="pane-mantencion" aria-selected="false">
+            <h4>Mantención & Reparación</h4>
+          </button>
+        </li>
+      </ul>
+
+      <button class="tabs-arrow next" type="button" aria-label="Siguiente">›</button>
+
+      <div class="tab-content">
+      <!-- Ventanas -->
+      <div class="tab-pane fade show active" id="pane-ventanas" role="tabpanel" aria-labelledby="tab-ventanas">
+        <div class="row flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0">
+            <h3>Ventanas Termopanel (DVH)</h3>
+            <p class="fst-italic">Aislación térmica y acústica real, herrajes de calidad y terminaciones duraderas para tu hogar u oficina.</p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i><span>Correderas, abatibles, oscilobatientes y fijas.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Perfiles de aluminio, sellos y felpas de alto desempeño.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Fábrica a medida en Santiago + garantía por escrito.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/image.png" alt="Ventanas termopanel en Santiago" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Terrazas -->
+      <div class="tab-pane fade" id="pane-terrazas" role="tabpanel" aria-labelledby="tab-terrazas">
+        <div class="row flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0">
+            <h3>Cierres de Terrazas y Balcones</h3>
+            <p class="fst-italic">Gana metros útiles sin perder luz: soluciones correderas o plegables, herméticas y seguras.</p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i><span>Vidrio templado/laminado, drenaje y sellos anti-lluvia.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Perfiles en aluminio, cierres magnéticos y tope antiviento.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Proyecto a medida y montaje profesional.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/image.png" alt="Cierre de terraza en vidrio y aluminio" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Puertas -->
+      <div class="tab-pane fade" id="pane-puertas" role="tabpanel" aria-labelledby="tab-puertas">
+        <div class="row flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0">
+            <h3>Puertas de Vidrio y Aluminio</h3>
+            <p class="fst-italic">Batientes y correderas para interior/exterior con herrajes de alta resistencia.</p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i><span>Vidrio templado y laminado, cierres suaves y seguros.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Perfiles anodizados o pintados, múltiples colores.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Instalación rápida, limpia y garantizada.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/image.png" alt="Puertas de vidrio y aluminio" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mamparas -->
+      <div class="tab-pane fade" id="pane-mamparas" role="tabpanel" aria-labelledby="tab-mamparas">
+        <div class="row flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0">
+            <h3>Shower Door & Mamparas de Baño</h3>
+            <p class="fst-italic">Funcionalidad y diseño: correderas o fijas en vidrio templado 8–10 mm.</p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i><span>Perfiles de aluminio, burletes y sellos anti-agua.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Tratamiento antical opcional y tiradores premium.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Medición sin costo en Santiago.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/image.png" alt="Mamparas de vidrio templado" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Especiales -->
+      <div class="tab-pane fade" id="pane-especiales" role="tabpanel" aria-labelledby="tab-especiales">
+        <div class="row flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0">
+            <h3>Ventanales & Especiales</h3>
+            <p class="fst-italic">Bow windows, esquinas en vidrio y paños panorámicos con máxima luminosidad.</p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i><span>Diseño, fabricación e instalación completa.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Compatibles con termopanel y control solar.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Asesoría técnica para proyectos residenciales/comerciales.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/image.png" alt="Ventanales a medida" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+      <!-- Mantención -->
+      <div class="tab-pane fade" id="pane-mantencion" role="tabpanel" aria-labelledby="tab-mantencion">
+        <div class="row flex-column-reverse flex-lg-row">
+          <div class="col-lg-6 d-flex flex-column justify-content-center mt-3 mt-lg-0">
+            <h3>Mantención & Reparación</h3>
+            <p class="fst-italic">Servicio técnico en toda la RM: alineación, sellos, felpas y reposición de paños.</p>
+            <ul>
+              <li><i class="bi bi-check2-all"></i><span>Cambio de ruedas/guías en correderas y ajustes de cierre.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Reemplazo de termopaneles empañados o rotos.</span></li>
+              <li><i class="bi bi-check2-all"></i><span>Garantía por escrito y atención rápida.</span></li>
+            </ul>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img src="assets/img/image.png" alt="Mantención de ventanas y puertas" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</section>
+<section id="projects" class="section">
+  <div class="wrap">
+    <h2 class="section-title">Proyectos</h2>
+
+    <div class="carousel" data-carousel>
+      <div class="track" data-track>
+
+        <!-- ===== SLIDE 1 ===== -->
+        <section class="slide">
+          <!-- Arriba izquierda (grande) -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?q=80&w=1600&auto=format&fit=crop" alt="">
+            <div class="content">
+              <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Technology</span></div>
+              <h3 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
+            </div>
+          </article>
+
+          <!-- Arriba derecha (mediana/alta) -->
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop" alt="">
+            <div class="content">
+              <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Security</span></div>
+              <h3 class="title">Sed do eiusmod tempor incididunt ut labore</h3>
+            </div>
+          </article>
+
+          <!-- Abajo: tres pequeñas -->
+          <div class="bottom">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1481068164146-e8beb686f4d2?q=80&w=1600&auto=format&fit=crop" alt="">
+              <div class="content">
+                <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Career</span></div>
+                <h3 class="title">Ut enim ad minim veniam, quis nostrud exercitation</h3>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1600&auto=format&fit=crop" alt="">
+              <div class="content">
+                <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Cloud</span></div>
+                <h3 class="title">Adipiscing elit, sed do eiusmod tempor incididunt</h3>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="">
+              <div class="content">
+                <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Programming</span></div>
+                <h3 class="title">Excepteur sint occaecat cupidatat non proident</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ===== SLIDE 2 ===== -->
+        <section class="slide">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop" alt="">
+            <div class="content">
+              <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Travel</span></div>
+              <h3 class="title">Nulla vitae elit libero, a pharetra augue</h3>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1520975922284-9e0ce8273b59?q=80&w=1600&auto=format&fit=crop" alt="">
+            <div class="content">
+              <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Design</span></div>
+              <h3 class="title">Cras justo odio, dapibus ac facilisis in</h3>
+            </div>
+          </article>
+
+          <div class="bottom">
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1600&auto=format&fit=crop" alt="">
+              <div class="content">
+                <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Tips</span></div>
+                <h3 class="title">Aenean lacinia bibendum nulla sed consectetur</h3>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600&auto=format&fit=crop" alt="">
+              <div class="content">
+                <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Home</span></div>
+                <h3 class="title">Praesent commodo cursus magna</h3>
+              </div>
+            </article>
+
+            <article class="card">
+              <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1600&auto=format&fit=crop" alt="">
+              <div class="content">
+                <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Nature</span></div>
+                <h3 class="title">Donec sed odio dui</h3>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Duplica más <section class="slide"> si quieres -->
+      </div>
+
+      <!-- Controles -->
+      <div class="ctrl" aria-hidden="true">
+        <button class="btn" data-prev aria-label="Anterior" title="Anterior">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M15 19L8 12l7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="btn" data-next aria-label="Siguiente" title="Siguiente">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="dots" data-dots></div>
+  </div>
+
+</section>
+              </main>
+
+  <!-- archivo js -->
+      <script src="assets/js/main.js"></script>
+  <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
