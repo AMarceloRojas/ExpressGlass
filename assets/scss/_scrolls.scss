@@ -1,0 +1,55 @@
+:root{
+  /* Ajusta a tu paleta */
+  --brand-yellow: #F7C52B;     /* amarillo de tu UI */
+  --brand-yellow-hover: #e6b61f;
+  --brand-dark: #2b2b2b;
+  --shadow-3: 0 8px 24px rgba(0,0,0,.18);
+  --shadow-2: 0 6px 18px rgba(0,0,0,.14);
+}
+
+.float-actions{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column-reverse; /* abajo: top, arriba: whatsapp */
+  gap: 12px;
+  z-index: 9999;
+}
+
+.fab{
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--brand-yellow);
+  color: var(--brand-dark);
+  border: none;
+  box-shadow: var(--shadow-3);
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease, opacity .2s ease;
+}
+.fab i{ font-size: 24px; line-height: 1; }
+
+.fab:hover{ transform: translateY(-2px); box-shadow: var(--shadow-2); }
+.fab:active{ transform: translateY(0); }
+
+.fab-top{ background: var(--brand-yellow); color: var(--brand-dark); }
+.fab-top:hover{ background: var(--brand-yellow-hover); }
+
+.fab-whatsapp{ background: #25D366; color: #fff; }
+.fab-whatsapp:hover{ filter: brightness(.95); }
+
+/* Oculto por defecto el botón "arriba" */
+#btnTop{ opacity: 0; pointer-events: none; }
+#btnTop.is-visible{ opacity: 1; pointer-events: auto; }
+
+/* Ajustes en móvil */
+@media (max-width: 576px){
+  .float-actions{ right: 14px; bottom: 14px; gap: 10px; }
+  .fab{ width: 52px; height: 52px; }
+}
+
+/* Accesibilidad: si el usuario prefiere menos animación */
+@media (prefers-reduced-motion: reduce){
+  .fab, .fab:hover{ transition: none; transform: none !important; }
+}

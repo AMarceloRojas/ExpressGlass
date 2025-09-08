@@ -1,6 +1,6 @@
 /* ===== Paleta ===== */
 $bg-cream:#FFF7EC; $paper:#FFFFFF; $ink:#2A1F1F; $muted:rgba(#2A1F1F,.70);
-$accent:#FDB813; $line:rgba(#2A1F1F,.12); $line-strong:rgba(#2A1F1F,.20);
+$accent:#fdb7139d; $line:rgba(#2A1F1F,.12); $line-strong:rgba(#2A1F1F,.20);
 $radius:16px; $shadow:0 10px 30px rgba(0,0,0,.08); $easing:.25s ease;
 
 /* ===== Imágenes dentro de panes ===== */
@@ -10,8 +10,35 @@ $radius:16px; $shadow:0 10px 30px rgba(0,0,0,.08); $easing:.25s ease;
 
 /* ===== NAV TABS (desktop base) ===== */
 #features{
-  .section-title h2{ margin:0; text-align:center; color:$ink; font-weight:800; }
-  .section-title::after{ content:""; display:block; width:64px; height:3px; margin:10px auto 0; background:$accent; border-radius:2px; }
+
+  /* ---- Título estilo "Proyectos" ---- */
+  .section-title {
+    text-align:center;
+
+    /* quitar subrayado corto original */
+    &::after{ display:none !important; }
+
+    h2{
+      margin:0;
+      color:$ink;
+      font-weight:800;
+
+      /* líneas laterales */
+      display:inline-flex;
+      align-items:center;
+      gap:clamp(12px, 2vw, 28px);
+
+      &::before,
+      &::after{
+        content:"";
+        display:inline-block;
+        width:clamp(56px, 7vw, 20px); /* largo de líneas */
+        height:2px;                     /* grosor de líneas */
+        background:$accent;
+        border-radius:2px;
+      }
+    }
+  }
 
   #featTabs.nav-tabs{
     border:0 !important; background:transparent;
@@ -101,6 +128,7 @@ $radius:16px; $shadow:0 10px 30px rgba(0,0,0,.08); $easing:.25s ease;
 @media (prefers-reduced-motion: reduce){
   #features #featTabs .nav-link, #features #featTabs .nav-link::after{ transition:none; }
 }
+
 /* iPad Pro (desktop breakpoint) – fuerza visibilidad de Servicios */
 @media (min-width: 992px) {
   /* 1) Asegura visibilidad aunque AOS no se inicialice */
@@ -136,4 +164,102 @@ $radius:16px; $shadow:0 10px 30px rgba(0,0,0,.08); $easing:.25s ease;
     opacity: 1 !important;
     transform: none !important;
   }
+}
+/* === REALCE DE SECCIÓN (fondo suave) === */
+#features {
+  background:
+    radial-gradient(1200px 600px at 80% 0%, rgba($accent-2, .12), transparent 55%),
+    linear-gradient(356deg, $bg-cream, #fff);
+  padding-top: clamp(28px, 4vw, 48px);
+  padding-bottom: clamp(32px, 6vw, 72px);
+}
+
+/* === TABS: más color y feedback === */
+#features #featTabs .nav-link{
+  position: relative;
+  border-radius: 12px !important;
+  padding: 12px 14px 22px;
+
+  /* pill en hover/active */
+  &:hover{
+    background: rgba($accent, .10) !important;
+  }
+  &.active{
+    color: $ink;
+    background: rgba($accent, .14) !important;
+    box-shadow: 0 6px 14px rgba($accent, .15) inset;
+  }
+}
+
+/* subrayados existentes un poco más marcados */
+#features #featTabs .nav-link::before{ background: rgba($ink,.16); }
+#features #featTabs .nav-link.active::after{ transform: scaleX(1); height: 3px; }
+
+/* === CARD para cada pane === */
+#features .tab-pane > .row{
+  background: $paper;
+  border: 1px solid $line;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: clamp(18px, 2vw, 28px);
+  overflow: hidden;
+}
+
+/* === LISTA: sin bullets; chips dorados para los checks === */
+#features .tab-pane ul{
+  list-style: none;           /* quita los puntitos negros */
+  padding-left: 0; margin: 0;
+}
+#features .tab-pane ul li{
+  display: flex; align-items: flex-start; gap: .65rem;
+  margin-bottom: .55rem;
+}
+
+/* ícono check “bonito” */
+#features .tab-pane ul li .bi{
+  width: 28px; height: 28px; flex: 0 0 28px;
+  display: inline-grid; place-items: center;
+  border-radius: 999px;
+  background: rgba($accent, .18);
+  color: mix($ink, $accent, 22%); /* dorado más legible */
+  box-shadow: inset 0 0 0 1px rgba($accent,.22);
+  margin-top: .15rem;           /* alinea con texto */
+  transition: transform $easing;
+}
+#features .tab-pane ul li:hover .bi{
+  transform: translateY(-1px) scale(1.03);
+}
+
+/* texto de ítems */
+#features .tab-pane ul li span{
+  color: $ink;
+}
+
+/* lead/descrp. en cursiva con mejor contraste */
+#features .tab-pane .fst-italic{
+  color: $muted;
+  background: linear-gradient(180deg, rgba($accent,.08), rgba($accent,0));
+  border-radius: 8px;
+  padding: 6px 10px;
+  display: inline-block;
+}
+
+/* === Imagen con marco y brillo leve (ya tienes base, lo potenciamos) === */
+#features .tab-pane .text-center img{
+  border: 1px solid $line;
+  box-shadow: 0 12px 26px rgba(0,0,0,.08);
+  outline: 3px solid rgba($accent,.10);
+}
+
+/* === Separador sutil bajo las tabs (más visible) === */
+#features #featTabs::after{
+  height: 2px;
+  background: linear-gradient(to right, transparent 0, rgba($ink,.08) 12%, rgba($ink,.08) 88%, transparent 100%);
+}
+
+/* === Responsivo: relleno menor en móvil === */
+@media (max-width: 991.98px){
+  #features .tab-pane > .row{ padding: 16px; }
+  #features .tab-pane ul li{ margin-bottom: .5rem; }
+  #features .tab-pane ul li .bi{ width: 26px; height: 26px; flex-basis: 26px; }
 }

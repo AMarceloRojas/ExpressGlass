@@ -7,11 +7,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo.png">
 
     <!-- Tu CSS compilado desde SCSS -->
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/scss/main.css">
 
-    <title>Express Glass</title>
+    <title>Express Glass Chile</title>
 </head>
     <body>
         <header id="header" class="header d-flex align-items-center sticky-top">
@@ -19,16 +22,16 @@
 
             <a href="index.html" class="logo d-flex align-items-center">
               <img src="assets/img/logo.png" alt="">
-              <h1 class="sitename">Expess Glass Termo Acústico Chile</h1>
+              <h1 class="sitename">Express Glass Termo Acústico Chile</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
               <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#hero" class="active">Inicio</a></li>
+                <li><a href="#alt-services">Nosotros</a></li>
+                <li><a href="#features">Servicios</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#site-footer">Contacto</a></li>
               </ul>
               <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -119,7 +122,7 @@
                             <div class="visual-container">
                               <!-- Imagen principal -->
                               <div class="featured-property">
-                                <img src="assets/img/image.png" alt="Featured Property" class="img-fluid">
+                                <img src="assets/img/casaprincpal.png" alt="Featured Property" class="img-fluid">
                                 <div class="property-info">
                                   <div class="property-price">Consulta Gratis!</div>
                                   <div class="property-details">
@@ -130,10 +133,10 @@
                               <!-- Imágenes overlay -->
                               <div class="overlay-images">
                                 <div class="overlay-img overlay-1">
-                                  <img src="assets/img/image.png" alt="Interior View" class="img-fluid">
+                                  <img src="assets/img/casaspekeñas.jpg" alt="Interior View" class="img-fluid">
                                 </div>
                                 <div class="overlay-img overlay-2">
-                                  <img src="assets/img/image.png" alt="Exterior View" class="img-fluid">
+                                  <img src="assets/img/miniimagen2.png" alt="Exterior View" class="img-fluid">
                                 </div>
                               </div>
                               <!-- Tarjeta de agente -->
@@ -155,9 +158,12 @@
                                     </div>
                                   </div>
                                 </div>
-                                <button class="contact-agent-btn">
-                                  <i class="bi bi-chat-dots"></i>
-                                </button>
+                                <a href="https://wa.me/56968579228?text=Estimados,%20me%20contacto%20con%20Express%20Glass%20T%C3%A9rmico%20Chile%20para%20una%20cotizaci%C3%B3n." 
+                                      target="_blank">
+                                      <button class="contact-agent-btn">
+                                        <i class="bi bi-whatsapp"></i>
+                                      </button>
+                                    </a>
                               </div>
                             </div><!-- Fin visual-container -->
                           </div>
@@ -171,7 +177,7 @@
 
                       <div class="row justify-content-around gy-4">
                         <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                          <img src="assets/img/ChatGPT Image Aug 17, 2025, 03_07_50 AM.png" alt="">
+                          <img src="assets/img/Nosotros.png" alt="">
                         </div>
 
                         <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
@@ -279,7 +285,7 @@
             </ul>
           </div>
           <div class="col-lg-6 text-center">
-            <img src="assets/img/image.png" alt="Ventanas termopanel en Santiago" class="img-fluid">
+            <img src="assets/img/pricipal.jpg" alt="Ventanas termopanel en Santiago" class="img-fluid">
           </div>
         </div>
       </div>
@@ -297,7 +303,7 @@
             </ul>
           </div>
           <div class="col-lg-6 text-center">
-            <img src="assets/img/image.png" alt="Cierre de terraza en vidrio y aluminio" class="img-fluid">
+            <img src="assets/img/cierredeterrazaaa.jpg" alt="Cierre de terraza en vidrio y aluminio" class="img-fluid">
           </div>
         </div>
       </div>
@@ -315,7 +321,7 @@
             </ul>
           </div>
           <div class="col-lg-6 text-center">
-            <img src="assets/img/image.png" alt="Puertas de vidrio y aluminio" class="img-fluid">
+            <img src="assets/img/puertaHD.jpg" alt="Puertas de vidrio y aluminio" class="img-fluid">
           </div>
         </div>
       </div>
@@ -333,7 +339,7 @@
             </ul>
           </div>
           <div class="col-lg-6 text-center">
-            <img src="assets/img/image.png" alt="Mamparas de vidrio templado" class="img-fluid">
+            <img src="assets/img/ducha2.0.jpeg" alt="Mamparas de vidrio templado" class="img-fluid">
           </div>
         </div>
       </div>
@@ -351,7 +357,7 @@
             </ul>
           </div>
           <div class="col-lg-6 text-center">
-            <img src="assets/img/image.png" alt="Ventanales a medida" class="img-fluid">
+            <img src="assets/img/ventanalesespeciales.jpg" alt="Ventanales a medida" class="img-fluid">
           </div>
         </div>
       </div>
@@ -368,8 +374,8 @@
               <li><i class="bi bi-check2-all"></i><span>Garantía por escrito y atención rápida.</span></li>
             </ul>
           </div>
-          <div class="col-lg-6 text-center">
-            <img src="assets/img/image.png" alt="Mantención de ventanas y puertas" class="img-fluid">
+          <div class="col-lg-6 text-center" >
+            <img src="assets/img/manteimiento.png" alt="Mantención de ventanas y puertas" class="img-fluid">
           </div>
         </div>
       </div>
@@ -379,7 +385,7 @@
 
 
 </section>
-<section id="projects" class="section">
+<section id="projects" class="section alt">
   <div class="wrap">
     <h2 class="section-title">Proyectos</h2>
 
@@ -387,100 +393,485 @@
       <div class="track" data-track>
 
         <!-- ===== SLIDE 1 ===== -->
-        <section class="slide">
-          <!-- Arriba izquierda (grande) -->
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?q=80&w=1600&auto=format&fit=crop" alt="">
-            <div class="content">
-              <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Technology</span></div>
-              <h3 class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h3>
-            </div>
-          </article>
+        <!-- ===== SLIDE 1 — Ventanas Termopanel (3x3) ===== -->
+<section class="slide">
+  <!-- Fila superior: 3 grandes -->
+  <article class="card">
+    <img src="/assets/img/VentanasTermopanel/Ventanas Termopanel en obra nueva.jpg" alt="Ventanas termopanel en obra nueva">
+    <div class="content">
+      <div class="meta"><span>Ene. 12, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+      <h3 class="title">Ventanas Termopanel en obra nueva</h3>
+    </div>
+  </article>
 
-          <!-- Arriba derecha (mediana/alta) -->
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1600&auto=format&fit=crop" alt="">
-            <div class="content">
-              <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Security</span></div>
-              <h3 class="title">Sed do eiusmod tempor incididunt ut labore</h3>
-            </div>
-          </article>
+  <article class="card">
+    <img src="/assets/img/VentanasTermopanel/Fachada con termopanel DVH.jpg" alt="Fachada con DVH">
+    <div class="content">
+      <div class="meta"><span>Feb. 04, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+      <h3 class="title">Fachada con termopanel DVH</h3>
+    </div>
+  </article>
 
-          <!-- Abajo: tres pequeñas -->
-          <div class="bottom">
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1481068164146-e8beb686f4d2?q=80&w=1600&auto=format&fit=crop" alt="">
-              <div class="content">
-                <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Career</span></div>
-                <h3 class="title">Ut enim ad minim veniam, quis nostrud exercitation</h3>
-              </div>
-            </article>
+  <article class="card">
+    <img src="/assets/img/VentanasTermopanel/Paneles fijos con control solar.jpg" alt="Paneles fijos con control solar">
+    <div class="content">
+      <div class="meta"><span>Mar. 19, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+      <h3 class="title">Paneles fijos con control solar</h3>
+    </div>
+  </article>
 
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1554995207-c18c203602cb?q=80&w=1600&auto=format&fit=crop" alt="">
-              <div class="content">
-                <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Cloud</span></div>
-                <h3 class="title">Adipiscing elit, sed do eiusmod tempor incididunt</h3>
-              </div>
-            </article>
-
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop" alt="">
-              <div class="content">
-                <div class="meta"><span>Apr. 14th, 2025</span><span class="dot"></span><span class="tag">Programming</span></div>
-                <h3 class="title">Excepteur sint occaecat cupidatat non proident</h3>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- ===== SLIDE 2 ===== -->
-        <section class="slide">
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?q=80&w=1600&auto=format&fit=crop" alt="">
-            <div class="content">
-              <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Travel</span></div>
-              <h3 class="title">Nulla vitae elit libero, a pharetra augue</h3>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="https://images.unsplash.com/photo-1520975922284-9e0ce8273b59?q=80&w=1600&auto=format&fit=crop" alt="">
-            <div class="content">
-              <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Design</span></div>
-              <h3 class="title">Cras justo odio, dapibus ac facilisis in</h3>
-            </div>
-          </article>
-
-          <div class="bottom">
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1600&auto=format&fit=crop" alt="">
-              <div class="content">
-                <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Tips</span></div>
-                <h3 class="title">Aenean lacinia bibendum nulla sed consectetur</h3>
-              </div>
-            </article>
-
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1600&auto=format&fit=crop" alt="">
-              <div class="content">
-                <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Home</span></div>
-                <h3 class="title">Praesent commodo cursus magna</h3>
-              </div>
-            </article>
-
-            <article class="card">
-              <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?q=80&w=1600&auto=format&fit=crop" alt="">
-              <div class="content">
-                <div class="meta"><span>Apr. 20th, 2025</span><span class="dot"></span><span class="tag">Nature</span></div>
-                <h3 class="title">Donec sed odio dui</h3>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <!-- Duplica más <section class="slide"> si quieres -->
+  <!-- Fila media: 3 medianas -->
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/VentanasTermopanel/Corredera DVH con sello perimetral.jpg" alt="Ventana corredera DVH">
+      <div class="content">
+        <div class="meta"><span>Abr. 08, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+        <h3 class="title">Corredera DVH con sello perimetral</h3>
       </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/VentanasTermopanel/Paños fijos panorámicos.jpg" alt="Paños fijos panorámicos">
+      <div class="content">
+        <div class="meta"><span>May. 17, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+        <h3 class="title">Paños fijos panorámicos</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/VentanasTermopanel/Reemplazo a DVH en dormitorio.jpg" alt="Reemplazo a DVH">
+      <div class="content">
+        <div class="meta"><span>Jun. 03, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+        <h3 class="title">Reemplazo a DVH en dormitorio</h3>
+      </div>
+    </article>
+  </div>
+
+  <!-- Fila inferior: 3 medianas -->
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/VentanasTermopanel/Termopanel con control solar.jpg" alt="Termopanel control solar">
+      <div class="content">
+        <div class="meta"><span>Jul. 12, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+        <h3 class="title">Termopanel con control solar</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/VentanasTermopanel/Ventanal DVH en sala de estar.jpg" alt="Ventanal DVH en sala">
+      <div class="content">
+        <div class="meta"><span>Jul. 28, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+        <h3 class="title">Ventanal DVH en sala de estar</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/VentanasTermopanel/Fachada con DVH y low-e.jpg" alt="Fachada vidrio DVH">
+      <div class="content">
+        <div class="meta"><span>Ago. 09, 2025</span><span class="dot"></span><span class="tag">Ventanas Termopanel</span></div>
+        <h3 class="title">Fachada con DVH y low-e</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SLIDE 2 — Cierres de Terrazas (3x3) ===== -->
+<section class="slide">
+  <article class="card">
+    <img src="/assets/img/Cierres de Terrazas/Cierre de terraza en aluminio.jpg" alt="Cierre de terraza en aluminio">
+    <div class="content">
+      <div class="meta"><span>Ene. 22, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+      <h3 class="title">Cierre de terraza en aluminio</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Cierres de Terrazas/Cierre de balcón con perfilería.jpg" alt="Cierre de balcón con perfilería">
+    <div class="content">
+      <div class="meta"><span>Feb. 13, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+      <h3 class="title">Cierre de balcón con perfilería</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Cierres de Terrazas/Cierres magnéticos antiviento.jpg" alt="Cierre magnético antiviento">
+    <div class="content">
+      <div class="meta"><span>Mar. 05, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+      <h3 class="title">Cierres magnéticos antiviento</h3>
+    </div>
+  </article>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Cierres de Terrazas/Sistema plegable para terraza.jpg" alt="Sistema plegable para terraza">
+      <div class="content">
+        <div class="meta"><span>Abr. 02, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+        <h3 class="title">Sistema plegable para terraza</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Cierres de Terrazas/Cortaviento corredero en balcón.jpg" alt="Cortaviento corredero en balcón">
+      <div class="content">
+        <div class="meta"><span>May. 11, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+        <h3 class="title">Cortaviento corredero en balcón</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Cierres de Terrazas/Panorámica sin pilares.jpg" alt="Terraza panorámica sin pilares">
+      <div class="content">
+        <div class="meta"><span>Jun. 24, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+        <h3 class="title">Panorámica sin pilares</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Cierres de Terrazas/Plegable aluminio + vidrio.jpg" alt="Cierre plegable de aluminio y vidrio">
+      <div class="content">
+        <div class="meta"><span>Jul. 07, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+        <h3 class="title">Plegable aluminio + vidrio</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Cierres de Terrazas/Balcón full glass.jpg" alt="Cierre de balcón full glass">
+      <div class="content">
+        <div class="meta"><span>Jul. 25, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+        <h3 class="title">Balcón full glass</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Cierres de Terrazas/Guía oculta panorámica.jpg" alt="Cierre panorámico con guía oculta">
+      <div class="content">
+        <div class="meta"><span>Ago. 14, 2025</span><span class="dot"></span><span class="tag">Cierres de Terrazas</span></div>
+        <h3 class="title">Guía oculta panorámica</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SLIDE 3 — Puertas Vidrio/Aluminio (3x3) ===== -->
+<section class="slide">
+  <article class="card">
+    <img src="/assets/img/Puertas Vidrio-Aluminio/Puerta templada con herrajes.jpg" alt="Puerta templada con herrajes">
+    <div class="content">
+      <div class="meta"><span>Ene. 07, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+      <h3 class="title">Puerta templada con herrajes</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Puertas Vidrio-Aluminio/Corredera templada de paso amplio.jpg" alt="Puerta corredera de vidrio">
+    <div class="content">
+      <div class="meta"><span>Ene. 29, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+      <h3 class="title">Corredera templada de paso amplio</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Puertas Vidrio-Aluminio/Abatible aluminio + vidrio.jpg" alt="Puerta abatible aluminio + vidrio">
+    <div class="content">
+      <div class="meta"><span>Feb. 24, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+      <h3 class="title">Abatible aluminio + vidrio</h3>
+    </div>
+  </article>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Puertas Vidrio-Aluminio/Puertas dobles templadas.jpg" alt="Puertas dobles templadas">
+      <div class="content">
+        <div class="meta"><span>Mar. 15, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+        <h3 class="title">Puertas dobles templadas</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Puertas Vidrio-Aluminio/Marco black matte.jpg" alt="Puerta con marco negro">
+      <div class="content">
+        <div class="meta"><span>Abr. 02, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+        <h3 class="title">Marco black matte</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Puertas Vidrio-Aluminio/Puerta para oficina moderna.jpg" alt="Puerta para oficina moderna">
+      <div class="content">
+        <div class="meta"><span>May. 05, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+        <h3 class="title">Puerta para oficina moderna</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Puertas Vidrio-Aluminio/Puerta pivotante de vidrio.jpg" alt="Puerta pivotante de vidrio">
+      <div class="content">
+        <div class="meta"><span>Jun. 10, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+        <h3 class="title">Puerta pivotante de vidrio</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Puertas Vidrio-Aluminio/Acceso de vidrio al comedor.jpg" alt="Puerta de vidrio en comedor">
+      <div class="content">
+        <div class="meta"><span>Jul. 23, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+        <h3 class="title">Acceso de vidrio al comedor</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Puertas Vidrio-Aluminio/Herrajes premium.jpg" alt="Puerta vidrio herrajes premium">
+      <div class="content">
+        <div class="meta"><span>Ago. 05, 2025</span><span class="dot"></span><span class="tag">Puertas Vidrio/Aluminio</span></div>
+        <h3 class="title">Herrajes premium</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SLIDE 4 — Shower & Mamparas (3x3) ===== -->
+<section class="slide">
+  <article class="card">
+    <img src="/assets/img/Shower & Mamparas/Mampara fija en baño moderno.jpg" alt="Mampara de baño moderna">
+    <div class="content">
+      <div class="meta"><span>Ene. 19, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+      <h3 class="title">Mampara fija en baño moderno</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Shower & Mamparas/Mampara corredera en suite.jpg" alt="Mampara corredera en suite">
+    <div class="content">
+      <div class="meta"><span>Feb. 15, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+      <h3 class="title">Mampara corredera en suite</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Shower & Mamparas/Mampara abatible con bisagras.jpg" alt="Mampara abatible con bisagras">
+    <div class="content">
+      <div class="meta"><span>Mar. 28, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+      <h3 class="title">Mampara abatible con bisagras</h3>
+    </div>
+  </article>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Shower & Mamparas/Templado 10 mm con sello.jpg" alt="Templado 10 mm con sello">
+      <div class="content">
+        <div class="meta"><span>Abr. 18, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+        <h3 class="title">Templado 10 mm con sello</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Shower & Mamparas/Shower esquina con perfilería.jpg" alt="Shower esquina con perfilería">
+      <div class="content">
+        <div class="meta"><span>May. 26, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+        <h3 class="title">Shower esquina con perfilería</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Shower & Mamparas/Mampara sin perfilería (clean look).jpg" alt="Mampara sin perfilería">
+      <div class="content">
+        <div class="meta"><span>Jun. 30, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+        <h3 class="title">Mampara sin perfilería (clean look)</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Shower & Mamparas/Vidrio esmerilado parcial.jpg" alt="Shower con vidrio esmerilado">
+      <div class="content">
+        <div class="meta"><span>Jul. 08, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+        <h3 class="title">Vidrio esmerilado parcial</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Shower & Mamparas/Herrajes negros mate.jpg" alt="Mampara con herrajes negros">
+      <div class="content">
+        <div class="meta"><span>Jul. 20, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+        <h3 class="title">Herrajes negros mate</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Shower & Mamparas/Canaleta oculta y desnivel.jpg" alt="Shower con canaleta oculta">
+      <div class="content">
+        <div class="meta"><span>Ago. 12, 2025</span><span class="dot"></span><span class="tag">Shower &amp; Mamparas</span></div>
+        <h3 class="title">Canaleta oculta y desnivel</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SLIDE 5 — Ventanales & Especiales (3x3) ===== -->
+<section class="slide">
+  <article class="card">
+    <img src="/assets/img/Ventanales & Especiales/Ventanales panorámicos en living.jpg" alt="Ventanales panorámicos en living">
+    <div class="content">
+      <div class="meta"><span>Ene. 05, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+      <h3 class="title">Ventanales panorámicos en living</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Ventanales & Especiales/Paño fijo panorámico.jpg" alt="Paños fijos de gran formato">
+    <div class="content">
+      <div class="meta"><span>Feb. 11, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+      <h3 class="title">Paños fijos de gran formato</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Ventanales & Especiales/Paneles con control solar.jpg" alt="Paneles con control solar">
+    <div class="content">
+      <div class="meta"><span>Mar. 09, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+      <h3 class="title">Paneles con control solar</h3>
+    </div>
+  </article>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Ventanales & Especiales/Piso a cielo, máxima luz natural.jpg" alt="Piso a cielo, máxima luz natural">
+      <div class="content">
+        <div class="meta"><span>Abr. 14, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+        <h3 class="title">Piso a cielo, máxima luz natural</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Ventanales & Especiales/Fachada de vidrio estructural.jpg" alt="Fachada de vidrio estructural">
+      <div class="content">
+        <div class="meta"><span>May. 31, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+        <h3 class="title">Fachada de vidrio estructural</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Ventanales & Especiales/Perfilería minimal y vistas.jpg" alt="Perfilería minimal y vistas">
+      <div class="content">
+        <div class="meta"><span>Jun. 19, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+        <h3 class="title">Perfilería minimal y vistas</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Ventanales & Especiales/Low‑E y control térmico.jpg" alt="Ventanal con low-e">
+      <div class="content">
+        <div class="meta"><span>Jul. 03, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+        <h3 class="title">Low‑E y control térmico</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Ventanales & Especiales/Marcos delgados y amplitud.jpg" alt="Ventanal con marcos delgados">
+      <div class="content">
+        <div class="meta"><span>Jul. 18, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+        <h3 class="title">Marcos delgados y amplitud</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Ventanales & Especiales/Paño fijo panorámico.jpg" alt="Paño fijo panorámico">
+      <div class="content">
+        <div class="meta"><span>Ago. 21, 2025</span><span class="dot"></span><span class="tag">Ventanales &amp; Especiales</span></div>
+        <h3 class="title">Paño fijo panorámico</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SLIDE 6 — Mantención & Reparación (3x3) ===== -->
+<section class="slide">
+  <article class="card">
+    <img src="/assets/img/Mantención & Reparación/Sellado perimetral y filtraciones.jpg" alt="Sellado perimetral y filtraciones">
+    <div class="content">
+      <div class="meta"><span>Ene. 23, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+      <h3 class="title">Sellado perimetral y filtraciones</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Mantención & Reparación/Ajuste y reemplazo de ruedas.jpg" alt="Ajuste y reemplazo de ruedas">
+    <div class="content">
+      <div class="meta"><span>Feb. 18, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+      <h3 class="title">Ajuste y reemplazo de ruedas</h3>
+    </div>
+  </article>
+
+  <article class="card">
+    <img src="/assets/img/Mantención & Reparación/Cambio de felpas y topes.jpg" alt="Cambio de felpas y topes">
+    <div class="content">
+      <div class="meta"><span>Mar. 30, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+      <h3 class="title">Cambio de felpas y topes</h3>
+    </div>
+  </article>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Mantención & Reparación/Reparación de herrajes y bisagras.jpg" alt="Reparación de herrajes y bisagras">
+      <div class="content">
+        <div class="meta"><span>Abr. 25, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+        <h3 class="title">Reparación de herrajes y bisagras</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Mantención & Reparación/Reemplazo de vidrios dañados.jpg" alt="Reemplazo de vidrios dañados">
+      <div class="content">
+        <div class="meta"><span>May. 14, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+        <h3 class="title">Reemplazo de vidrios dañados</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Mantención & Reparación/Alineación de marcos y cierres.jpg" alt="Alineación de marcos y cierres">
+      <div class="content">
+        <div class="meta"><span>Jun. 06, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+        <h3 class="title">Alineación de marcos y cierres</h3>
+      </div>
+    </article>
+  </div>
+
+  <div class="bottom">
+    <article class="card">
+      <img src="/assets/img/Mantención & Reparación/Cambio de burletes y sellos.jpg" alt="Cambio de burletes y sellos">
+      <div class="content">
+        <div class="meta"><span>Jul. 09, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+        <h3 class="title">Cambio de burletes y sellos</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Mantención & Reparación/Revisión de estanqueidad.jpg" alt="Revisión de estanqueidad">
+      <div class="content">
+        <div class="meta"><span>Jul. 21, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+        <h3 class="title">Revisión de estanqueidad</h3>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="/assets/img/Mantención & Reparación/Refuerzo de fijaciones.jpg" alt="Refuerzo de fijaciones">
+      <div class="content">
+        <div class="meta"><span>Ago. 17, 2025</span><span class="dot"></span><span class="tag">Mantención &amp; Reparación</span></div>
+        <h3 class="title">Refuerzo de fijaciones</h3>
+      </div>
+    </article>
+  </div>
+</section>
+
+      </div>
+      
 
       <!-- Controles -->
       <div class="ctrl" aria-hidden="true">
@@ -495,9 +886,121 @@
 
     <div class="dots" data-dots></div>
   </div>
-
 </section>
+
+<!-- Botones flotantes -->
+<div class="float-actions" aria-label="Acciones rápidas">
+  <!-- WhatsApp -->
+  <a
+    class="fab fab-whatsapp"
+    href="https://wa.me/56968579228?text=Hola%20Express%20Glass,%20quisiera%20una%20cotizaci%C3%B3n."
+    target="_blank" rel="noopener" aria-label="Contactar por WhatsApp"
+  >
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Ir arriba -->
+  <button id="btnTop" class="fab fab-top" type="button" aria-label="Volver al inicio">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+</div>
+
               </main>
+              <footer id="site-footer" class="footer section">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row gy-4">
+        <!-- Marca -->
+        <div class="col-12 col-lg-4">
+          <div class="footer-brand">
+            <a class="brand" href="#">
+              <img src="assets/img/logo.png" alt="Express Glass" class="brand-logo" />
+              <span class="brand-name">Express Glass</span>
+            </a>
+            <p class="brand-copy">
+              Soluciones en vidrio y aluminio: ventanas termopanel, puertas, cierres de terrazas y más.
+              Diseño moderno, instalación profesional y garantía por escrito.
+            </p>
+            <div class="social">
+              <a href="https://wa.me/56968579228?text=Estimados,%20me%20contacto%20con%20Express%20Glass%20T%C3%A9rmico%20Chile%20para%20una%20cotizaci%C3%B3n." aria-label="WhatsApp" class="social-btn" rel="noopener">
+                <!-- icono WhatsApp -->
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.52 3.48A11.94 11.94 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.18 1.6 6.01L0 24l6.17-1.61A12 12 0 1 0 20.52 3.48ZM12 21.82a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.66.96.98-3.57-.23-.38A9.82 9.82 0 1 1 12 21.82Zm5.63-7.43c-.31-.15-1.83-.9-2.12-1-.28-.1-.49-.15-.7.16-.2.3-.8 1-.98 1.2-.18.2-.36.22-.67.08-.31-.15-1.32-.49-2.52-1.56-.93-.83-1.55-1.86-1.73-2.17-.18-.31-.02-.48.13-.63.13-.13.31-.34.46-.51.15-.17.2-.29.31-.48.1-.2.05-.37-.03-.52-.08-.15-.7-1.69-.96-2.31-.25-.6-.51-.52-.7-.53l-.6-.01c-.2 0-.52.08-.8.37-.28.3-1.05 1.03-1.05 2.51 0 1.48 1.08 2.92 1.23 3.12.15.2 2.12 3.24 5.14 4.54.72.31 1.28.49 1.72.63.72.23 1.37.2 1.88.12.57-.08 1.83-.75 2.09-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.34Z" fill="currentColor"/></svg>
+              </a>
+              <a href="#" aria-label="Instagram" class="social-btn" rel="noopener">
+                <!-- icono Instagram -->
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .25 2.5.42.6.23 1 .5 1.5 1 .5.5.8.9 1 1.5.2.6.3 1.3.4 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 2-.4 2.5-.2.6-.5 1-1 1.5-.5.5-.9.8-1.5 1-.6.2-1.3.3-2.5.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.2-2.5-.4-.6-.2-1-.5-1.5-1-.5-.5-.8-.9-1-1.5-.2-.6-.3-1.3-.4-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-2 .4-2.5.2-.6.5-1 1-1.5.5-.5.9-.8 1.5-1 .6-.2 1.3-.3 2.5-.4C8.4 2.2 8.8 2.2 12 2.2m0-2.2C8.8 0 8.3 0 7 .1 5.7.1 4.7.3 3.9.6 3 .9 2.3 1.3 1.6 2 1 2.6.6 3.3.3 4.1.1 4.9 0 5.9 0 7 .1 8.3.1 8.8.1 12s0 3.7.1 5c.1 1.3.2 2.2.5 3 .3.8.7 1.5 1.3 2.1.6.6 1.3 1 2.1 1.3.8.3 1.7.5 3 .5 1.3.1 1.8.1 5 .1s3.7 0 5-.1c1.3-.1 2.2-.2 3-.5.8-.3 1.5-.7 2.1-1.3.6-.6 1-1.3 1.3-2.1.3-.8.5-1.7.5-3 .1-1.3.1-1.8.1-5s0-3.7-.1-5c-.1-1.3-.2-2.2-.5-3-.3-.8-.7-1.5-1.3-2.1C22.7 1 22 .6 21.2.3 20.4.1 19.5 0 18.2 0 17 0 16.5 0 12 0Z" fill="currentColor"/><circle cx="12" cy="12" r="3.2" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=61579277515125&notif_id=1754747162731171&notif_t=page_user_activity&ref=notif#" aria-label="Facebook" class="social-btn" rel="noopener">
+                <!-- icono Facebook -->
+                <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M22 12A10 10 0 1 0 10 21.9v-7.1H7.5V12H10V9.7c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.3.2 2.3.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.8H13v7.1A10 10 0 0 0 22 12Z" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Servicios -->
+        <div class="col-6 col-lg-2">
+          <h6 class="ft-title">Servicios</h6>
+          <ul class="ft-links">
+            <li><a href="#pane-ventanas">Ventanas Termopanel</a></li>
+            <li><a href="#pane-terrazas">Cierres de Terrazas</a></li>
+            <li><a href="#pane-puertas">Puertas Vidrio/Aluminio</a></li>
+            <li><a href="#pane-mamparas">Shower & Mamparas</a></li>
+            <li><a href="#pane-especiales">Ventanales & Especiales</a></li>
+            <li><a href="#pane-mantencion">Mantención & Reparación</a></li>
+          </ul>
+        </div>
+
+        <!-- Nosotros -->
+        <div class="col-6 col-lg-2">
+          <h6 class="ft-title">Nosotros</h6>
+          <ul class="ft-links">
+            <li><a href="#about">Quiénes somos</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#faq">Preguntas frecuentes</a></li>
+            <li><a href="#reviews">Reseñas</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="col-12 col-lg-4">
+          <h6 class="ft-title">Contacto</h6>
+          <ul class="ft-contact">
+            <li>
+              <span class="ic ic-map" aria-hidden="true"></span>
+              <span>RM – Santiago, Chile</span>
+            </li>
+            <li>
+              <span class="ic ic-clock" aria-hidden="true"></span>
+              <span>Lun–Sáb: 8:00– 23:00</span>
+            </li>
+            <li>
+              <span class="ic ic-phone" aria-hidden="true"></span>
+              <a href="tel:+56968579228">+56 9 6857 9228</a>
+            </li>
+            <li>
+              <span class="ic ic-mail" aria-hidden="true"></span>
+              <a href="mailto:expressglass.cl@gmail.com">expressglass.cl@gmail.com</a>
+            </li>
+          </ul>
+          <a class="cta-whatsapp" href="https://wa.me/56968579228?text=Estimados,%20me%20contacto%20con%20Express%20Glass%20T%C3%A9rmico%20Chile%20para%20una%20cotizaci%C3%B3n." rel="noopener" aria-label="Escríbenos por WhatsApp">
+            <span>Escríbenos por WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between gap-2">
+      <small>© <span id="y"></span> Express Glass. Todos los derechos reservados.</small>
+      <ul class="ft-legal">
+        <li><a href="/pv.html">Política de privacidad</a></li>
+        <li><a href="/TyC.html">Términos y condiciones</a></li>
+      </ul>
+    </div>
+  </div>
+                  </footer>
 
   <!-- archivo js -->
       <script src="assets/js/main.js"></script>

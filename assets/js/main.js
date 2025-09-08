@@ -134,3 +134,22 @@ document.querySelectorAll(".nav-tabs .nav-link").forEach(link => {
 
     new ResizeObserver(()=> setActive()).observe(track);
   })();
+document.getElementById('y').textContent = new Date().getFullYear();
+const btnTop = document.getElementById('btnTop');
+
+  // Mostrar/ocultar el botón "arriba" al hacer scroll
+  const showAfter = 240; // px scrolleados para mostrar
+  const onScroll = () => {
+    if (window.scrollY > showAfter) {
+      btnTop.classList.add('is-visible');
+    } else {
+      btnTop.classList.remove('is-visible');
+    }
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('load', onScroll);
+
+  // Scroll suave hacia arriba
+  btnTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });

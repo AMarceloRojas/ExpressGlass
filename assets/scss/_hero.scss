@@ -19,7 +19,9 @@ hero {
   background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 0%, transparent 100%);
   z-index: -1;
 }
-
+.hero-wrapper .col-lg-7{
+  margin-top: 34px;
+}
 .hero .hero-wrapper {
   position: relative;
   z-index: 1;
@@ -34,7 +36,7 @@ hero {
 .hero-wrapper .col-lg-5 {
   padding-left: 24px; // o lo que quieras
   padding-right: 24px;
-  margin-top: 39px;
+  margin-top: 49px;
 }
 
 
@@ -300,7 +302,7 @@ hero {
   border-radius: 20px;
   box-shadow: 0 25px 50px color-mix(in srgb, var(--default-color), transparent 88%);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-  width: 360px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -356,8 +358,8 @@ hero {
 }
 
 .hero .hero-visual .visual-container .agent-card .contact-agent-btn {
-  width: 44px;
-  height: 44px;
+  width: 54px;
+  height: 54px;
   background: var(--accent-color);
   color: var(--contrast-color);
   border: none;
