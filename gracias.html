@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>¡Gracias!</title>
+  <style>
+    /* =========================
+       Express Glass — "Gracias"
+       Paleta
+       ========================= */
+    :root{
+      --ink: #2B2B2B;
+      --paper: #ffffff;
+      --bg-cream: #FFF7E7;
+      --bg-cream-2:#FEF1D1;
+      --accent:#F7C52B;
+      --accent-600:#e6b61f;
+      --muted:#6f6f6f;
+      --ring: rgba(0,0,0,.08);
+      --shadow-1: 0 20px 60px rgba(0,0,0,.10);
+      --radius-2xl: 22px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--ink);
+      font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(247,197,43,.20), transparent 60%),
+        radial-gradient(900px 500px at -10% 110%, rgba(247,197,43,.12), transparent 60%),
+        linear-gradient(180deg, var(--bg-cream), var(--bg-cream-2));
+      overflow:hidden;
+    }
+
+    /* Layout */
+    .wrap{
+      min-height:100%;
+      display:grid;
+      place-items:center;
+      padding:40px 20px;
+      position:relative;
+      isolation:isolate;
+    }
+
+    /* Card */
+    .card{
+      width:min(860px, 92vw);
+      background:rgba(255,255,255,.75);
+      backdrop-filter:saturate(140%) blur(12px);
+      border-radius:var(--radius-2xl);
+      box-shadow:var(--shadow-1);
+      border:1px solid rgba(255,255,255,.6);
+      overflow:hidden;
+      animation: pop .6s ease-out both .05s;
+    }
+    @keyframes pop{
+      from{ transform:translateY(8px) scale(.98); opacity:0 }
+      to{ transform:translateY(0) scale(1); opacity:1 }
+    }
+
+    .hero{
+      position:relative;
+      padding:32px 28px 20px;
+      display:grid;
+      grid-template-columns: 86px 1fr auto;
+      gap:20px;
+      align-items:center;
+    }
+
+    /* Animated check */
+    .check{
+      width:86px; height:86px; border-radius:22px;
+      background: conic-gradient(from 180deg at 50% 50%, rgba(247,197,43,.25), rgba(247,197,43,.05));
+      display:grid; place-items:center;
+      border:1px solid rgba(247,197,43,.35);
+      box-shadow: inset 0 0 0 6px rgba(247,197,43,.08);
+    }
+    .check svg{
+      width:54px; height:54px;
+      display:block;
+    }
+    .draw{
+      stroke-dasharray: 120;
+      stroke-dashoffset: 120;
+      animation: draw 900ms cubic-bezier(.65,.05,.36,1) forwards .25s;
+    }
+    @keyframes draw{ to{ stroke-dashoffset:0 } }
+
+    .title{
+      font-size:clamp(26px, 3.2vw, 36px);
+      line-height:1.15;
+      margin:0;
+      color:var(--ink);
+      font-weight:900;
+      letter-spacing:.2px;
+    }
+    .subtitle{
+      margin:6px 0 0;
+      color:var(--muted);
+      font-size:clamp(14px, 1.6vw, 16px);
+    }
+
+    /* Badge city (estética del home) */
+    .badge{
+      display:inline-grid; grid-auto-flow:column; gap:8px; align-items:center;
+      font-weight:700; color:#564200; font-size:13px;
+      padding:8px 12px; border-radius:999px;
+      background:linear-gradient(180deg, #FFF4C7, #FFE896);
+      border:1px solid #ffe082;
+      box-shadow: 0 6px 16px rgba(247,197,43,.25);
+      margin-top:10px;
+      width:max-content;
+    }
+    .pin{ width:16px; height:16px; border-radius:50%; background:var(--accent); position:relative }
+    .pin::after{
+      content:""; position:absolute; inset:auto 0 -9px 0; margin:auto; width:8px; height:8px;
+      transform:rotate(45deg); background:var(--accent); border-radius:2px;
+    }
+
+    /* Body */
+    .body{
+      padding:12px 28px 28px;
+      display:grid; gap:18px;
+    }
+    .cta{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      margin-top:6px;
+    }
+    .btn{
+      appearance:none; border:0; cursor:pointer;
+      background: linear-gradient(180deg, var(--accent), var(--accent-600));
+      color:#3a2b00; font-weight:900; letter-spacing:.2px;
+      padding:14px 20px; border-radius:14px;
+      box-shadow: 0 10px 24px rgba(247,197,43,.35), inset 0 -2px 0 rgba(0,0,0,.08);
+      transition: transform .15s ease, box-shadow .15s ease, filter .2s ease;
+      text-decoration:none; font-size:15px;
+    }
+    .btn:hover{ transform: translateY(-1px); filter:brightness(1.02)}
+    .btn:active{ transform: translateY(0) scale(.99)}
+
+    .ghost{
+      background:transparent; color:var(--ink);
+      border:1px solid rgba(0,0,0,.08);
+      box-shadow:none;
+    }
+
+    .note{
+      color:var(--muted); font-size:13px;
+    }
+
+    /* Floating thumbnails (look tipo “galería”) */
+    .thumbs{
+      position:absolute; inset:0; pointer-events:none; z-index:-1;
+    }
+    .thumb{
+      position:absolute; width:110px; aspect-ratio: 4/3;
+      border-radius:16px; background: #fff; border:1px solid rgba(0,0,0,.06);
+      box-shadow: 0 12px 30px rgba(0,0,0,.12);
+      transform: rotate(var(--r)) translateY(0);
+      animation: float 6s ease-in-out infinite var(--d);
+      background-image: linear-gradient(135deg, #eaeaea, #ffffff);
+    }
+    @keyframes float{
+      0%,100%{ transform: rotate(var(--r)) translateY(0)}
+      50%{ transform: rotate(calc(var(--r) * 1)) translateY(-10px)}
+    }
+    .thumb.t1{ right:18px; top:-18px; --r:5deg; --d:.2s }
+    .thumb.t2{ left:-14px; bottom:-18px; --r:-6deg; --d:.6s }
+
+    /* Confetti canvas always behind content */
+    canvas#confetti{
+      position:fixed; inset:0; width:100%; height:100%;
+      pointer-events:none; z-index:-2;
+    }
+
+    /* Auto-redirect hint */
+    .redirect{
+      margin-left:6px; font-weight:700; color:#7a5a00;
+    }
+
+    @media (max-width:720px){
+      .hero{ grid-template-columns: 68px 1fr; }
+      .check{ width:68px; height:68px }
+      .check svg{ width:42px; height:42px }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confetti"></canvas>
+
+  <div class="wrap">
+    <div class="card" role="region" aria-labelledby="gracias-title">
+      <!-- floating thumbnails just for ambient decor -->
+      <div class="thumbs" aria-hidden="true">
+        <span class="thumb t1"></span>
+        <span class="thumb t2"></span>
+      </div>
+
+      <header class="hero">
+        <div class="check" aria-hidden="true">
+          <!-- Animated check stroke -->
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="rgba(247,197,43,.55)" stroke-width="2"/>
+            <path class="draw" d="M18 33.5 28.5 44 46 23" stroke="#2B2B2B" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <h1 id="gracias-title" class="title">¡Gracias por contactarnos!</h1>
+          <p class="subtitle">Hemos recibido tu mensaje. Nuestro equipo te responderá muy pronto por correo o WhatsApp.</p>
+          <div class="badge"><span class="pin"></span> Express Glass · Santiago, Chile</div>
+        </div>
+      </header>
+
+      <div class="body">
+        <div class="cta">
+          <a class="btn" href="/">Volver al inicio</a>
+          <a class="btn ghost" href="/#contacto">Enviar otro mensaje</a>
+          <span class="note">Te redirigiremos al inicio en <span id="count" class="redirect">5</span> s.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Mini confetti (ligero y sin librerías)
+    (() => {
+      const c = document.getElementById('confetti');
+      const ctx = c.getContext('2d');
+      let w, h, pieces = [], running = true;
+
+      const COLORS = ['#F7C52B','#FFD65A','#FFE89A','#2B2B2B','#ffffff'];
+
+      function resize(){
+        w = c.width = innerWidth;
+        h = c.height = innerHeight;
+      }
+      addEventListener('resize', resize);
+      resize();
+
+      function makePiece(){
+        return {
+          x: Math.random()*w,
+          y: -10,
+          s: 6 + Math.random()*8,                   // size
+          r: Math.random()*Math.PI,                 // rotation
+          v: 1 + Math.random()*2.2,                 // fall speed
+          w: Math.random()*0.08 + 0.02,             // angular velocity
+          c: COLORS[(Math.random()*COLORS.length)|0],
+          a: .85 + Math.random()*.15
+        };
+      }
+      for(let i=0;i<140;i++) pieces.push(makePiece());
+
+      function tick(){
+        if(!running) return;
+        ctx.clearRect(0,0,w,h);
+        pieces.forEach(p=>{
+          p.y += p.v;
+          p.r += p.w;
+          if(p.y>h+20){ p.x=Math.random()*w; p.y=-10 }
+          ctx.save();
+          ctx.translate(p.x,p.y);
+          ctx.rotate(p.r);
+          ctx.globalAlpha = p.a;
+          ctx.fillStyle = p.c;
+          ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*0.6);
+          ctx.restore();
+        });
+        requestAnimationFrame(tick);
+      }
+      tick();
+
+      // Auto-stop confetti después de 6s
+      setTimeout(()=>{ running=false; ctx.clearRect(0,0,w,h); }, 6000);
+    })();
+
+    // Cuenta regresiva y redirección
+    (function(){
+      const el = document.getElementById('count');
+      let n = 5;
+      const id = setInterval(()=>{
+        n--; el.textContent = n;
+        if(n<=0){ clearInterval(id); location.href = "/" }
+      }, 1000);
+    })();
+  </script>
+</body>
+</html>
